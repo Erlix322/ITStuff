@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMenuController">
+   <children>
+      <BorderPane fx:id="center" layoutX="200.0" layoutY="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <StackPane fx:id="stackPane" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <VBox fx:id="MenuStrip" style="-fx-background-color: #494950;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="47.0" prefWidth="129.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="100.0" text="Hauptmenü" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="MenuButton" fitHeight="31.0" fitWidth="31.0" onMouseClicked="#onClickMenu" pickOnBounds="true" preserveRatio="true">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@Menu-50.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="60.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <Separator prefWidth="200.0" />
+                  <HBox fx:id="ItPraktikum" alignment="CENTER" prefHeight="52.0">
+                     <children>
+                        <Button fx:id="btnPrakt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ItPrakt" prefHeight="79.0" prefWidth="198.0" text="HTTP" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="52.0" prefWidth="129.0">
+                     <children>
+                        <Button id="btnProxy" mnemonicParsing="false" prefHeight="209.0" prefWidth="682.0" text="Proxy" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <HBox prefHeight="58.0" prefWidth="129.0">
+                     <children>
+                        <Button id="btnChunked" mnemonicParsing="false" prefHeight="85.0" prefWidth="271.0" text="Chunked" />
+                     </children></HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
