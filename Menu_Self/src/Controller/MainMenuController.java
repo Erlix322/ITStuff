@@ -43,6 +43,9 @@ public class MainMenuController implements Initializable, SuperView{
 	@FXML
 	Button btnPrakt;
 	
+	@FXML
+	Button btnProxy;
+	
 	boolean isOpen = false;
 	private static final int DEFAULT_STARTING_X_POSITION = 0;
     private static final int DEFAULT_ENDING_X_POSITION = -150;
@@ -63,7 +66,8 @@ public class MainMenuController implements Initializable, SuperView{
 		gen.applyTranslateAnimationOn(MenuStrip, 300, DEFAULT_STARTING_X_POSITION, DEFAULT_ENDING_X_POSITION);
 		gen.applyTranslateAnimationOn(stackPane, 300, DEFAULT_STARTING_X_POSITION, DEFAULT_ENDING_X_POSITION);
 		gen.applyRotationOn(MenuButton, 300, 180, 1);
-		btnPrakt.setDisable(true);
+		btnPrakt.setDisable(true); 
+		btnProxy.setDisable(true);
 		isOpen = false;
 		
 	}
@@ -73,7 +77,7 @@ public class MainMenuController implements Initializable, SuperView{
 		gen.applyTranslateAnimationOn(MenuStrip, 300, DEFAULT_ENDING_X_POSITION, DEFAULT_STARTING_X_POSITION);
 		gen.applyTranslateAnimationOn(stackPane, 300, DEFAULT_ENDING_X_POSITION, DEFAULT_STARTING_X_POSITION);
 		gen.applyRotationOn(MenuButton, 300, 180, 1);
-		btnPrakt.setDisable(false);
+		btnPrakt.setDisable(false); btnProxy.setDisable(false);
 		isOpen = true;
 	}
 	
@@ -88,8 +92,15 @@ public class MainMenuController implements Initializable, SuperView{
 	
 	@FXML
 	public void ItPrakt(){
-		if(stackPane.getChildren().isEmpty())
+		stackPane.getChildren().clear();
 		stackPane.getChildren().add((vc.getScreen("ItPrakt")));	
+		closeAnim();
+	}	
+	
+	@FXML
+	public void ProxyPrakt(){
+		stackPane.getChildren().clear();
+		stackPane.getChildren().add((vc.getScreen("ProxyPrakt")));	
 		closeAnim();
 	}	
 	

@@ -17,20 +17,21 @@ import javafx.scene.layout.BorderPane;
 public class Main extends Application {
 	Scene scene;
 	Stage stage;
+	ViewFactory sc;
 	
 	public static String screen1ID = "ItPrakt";
 	public static String screen1File = "/View/ItPraktTask.fxml";
 	public static String screen2ID = "main";
 	public static String screen2File = "/View/MainMenu.fxml";
+	public static String screen3ID = "ProxyPrakt";
+	public static String screen3File = "/View/Proxy.fxml";
 	
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 			//Initialize Views in Hashmap
-			ViewFactory sc = new ViewFactory();
-			sc.loadScreen(Main.screen1ID,Main.screen1File);
-			sc.loadScreen(Main.screen2ID,Main.screen2File);
-			
+			sc = new ViewFactory();
+			loadViews();
 		    
 			Parent root = (Parent) sc.getScreen("main");
 	        primaryStage.setTitle("MenuStrip");
@@ -52,5 +53,12 @@ public class Main extends Application {
 	
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	private void loadViews(){
+		
+		sc.loadScreen(Main.screen1ID,Main.screen1File);
+		sc.loadScreen(Main.screen2ID,Main.screen2File);
+		sc.loadScreen(Main.screen3ID,Main.screen3File);
 	}
 }

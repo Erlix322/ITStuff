@@ -26,6 +26,7 @@ public class ViewFactory {
 		} catch (IOException e) {			
 			e.printStackTrace();
 			
+			
 		}
 	}
 	

@@ -48,13 +48,13 @@
                   <Separator prefWidth="200.0" />
                   <HBox prefHeight="52.0" prefWidth="129.0">
                      <children>
-                        <Button id="btnProxy" mnemonicParsing="false" prefHeight="209.0" prefWidth="682.0" text="Proxy" />
+                        <Button fx:id="btnProxy" onAction="#ProxyPrakt" mnemonicParsing="false" prefHeight="209.0" prefWidth="682.0" text="Proxy" />
                      </children>
                   </HBox>
                   <Separator prefWidth="200.0" />
                   <HBox prefHeight="58.0" prefWidth="129.0">
                      <children>
-                        <Button id="btnChunked" mnemonicParsing="false" prefHeight="85.0" prefWidth="271.0" text="Chunked" />
+                        <Button fx:id="btnChunked" mnemonicParsing="false" prefHeight="85.0" prefWidth="271.0" text="Chunked" />
                      </children></HBox>
                   <Separator prefWidth="200.0" />
                </children>
