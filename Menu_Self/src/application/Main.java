@@ -25,6 +25,8 @@ public class Main extends Application {
 	public static String screen2File = "/View/MainMenu.fxml";
 	public static String screen3ID = "ProxyPrakt";
 	public static String screen3File = "/View/Proxy.fxml";
+	public static String screen4ID = "lol";
+	public static String screen4File = "/View/Diagram.fxml";
 	
 	
 	@Override
@@ -44,8 +46,7 @@ public class Main extends Application {
 	        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 	            @Override
 	            public void handle(WindowEvent event) {
-	                System.out.println("HUHU");
-	            	Platform.exit();
+	               	Platform.exit();
 	                System.exit(0);
 	            }
 	        });
@@ -60,5 +61,6 @@ public class Main extends Application {
 		sc.loadScreen(Main.screen1ID,Main.screen1File);
 		sc.loadScreen(Main.screen2ID,Main.screen2File);
 		sc.loadScreen(Main.screen3ID,Main.screen3File);
+		sc.loadScreen(Main.screen4ID,Main.screen4File);
 	}
 }
